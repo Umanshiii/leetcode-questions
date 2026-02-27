@@ -1,0 +1,16 @@
+class Solution(object):
+    def removeDuplicates(self, nums):
+        if not nums:
+            return 0
+
+    
+        i = 0
+
+    
+        for j in range(1, len(nums)):
+            if nums[j] != nums[i]:
+                i += 1  # Move to the next position for a unique element
+                nums[i] = nums[j]  # Update the unique element at position i
+
+        return i + 1
+        
