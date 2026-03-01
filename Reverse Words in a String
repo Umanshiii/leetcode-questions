@@ -1,0 +1,12 @@
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        words=s.split()
+        out=words[len(words)-1]
+        i=len(words)-2
+        while i>=0:
+            out=out+' '+words[i]
+            i-=1
+
+        return out
+
+        
